@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+   <head>
+      <meta charset="utf-8">
+      <title>Health First</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="assets/css/prettyPhoto.css">
+      <link rel="stylesheet" href="assets/css/style.css">
+      <script src="assets/js/modernizr-2.6.2.min.js"></script>
+      <link rel="stylesheet" href="assets/css/style1.css">
+   </head>
+   <body>
+
+      <header class="main-header">
+         <nav class="navbar navbar-static-top">
+            <div class="navbar-top">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-sm-6 col-xs-12">
+                        <ul class="list-unstyled list-inline header-contact">
+                           <li> <i class="fa fa-phone"></i> <a href="tel:">987-654-3210 </a> </li>
+                           <li> <i class="fa fa-envelope"></i> <a href="mailto:heathfirst@gov.org">heathfirst@gov.org</a> </li>
+                        </ul>
+                     </div>
+                     <div class="col-sm-6 col-xs-12 text-right">
+                        <ul class="list-unstyled list-inline header-social">
+                           <li> <a href="https://www.facebook.com"> <i class="fa fa-facebook"></i> </a> </li>
+                           <li> <a href="https://www.twitter.com"> <i class="fa fa-twitter"></i>  </a> </li>
+                           <li> <a href="https://www.google.com"> <i class="fa fa-google"></i>  </a> </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="navbar-main">
+               <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                     <a class="navbar-brand" href="index.php"><img src="assets/images/HealthFirst.jpg" alt=""></a>
+                  </div>
+                  <div id="navbar" class="navbar-collapse collapse pull-right">
+                     <ul class="nav navbar-nav">
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="hospitalsnear.html">HOSPITALS NEAR YOU</a></li>
+                        <li ><a href="remedy.html">REMEDIES</a>
+                        </li>
+                        <li><a class="is-active" href="findadoc.html">FIND A DOCTOR</a></li>
+                        <li><a href="emergency.html">EMERGENCY</a>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <div class="page-heading text-center">
+         <div class="container zoomIn animated">
+            <h1 class="page-title">FIND A DOCTOR <span class="title-under"></span></h1>
+            <p class="page-description">
+               Here you can search for a place and hospitals available in that place then you can have the search results for the department you are looking for.
+            </p>
+         </div>
+      </div>
+      <div class="main-container">
+      <div class="container gallery fadeIn animated">
+         <div class="row">
+            <div class="row">
+               <div class="col-md-1">
+                  <div id="findhospitals">
+                     Find hospitals in:
+                  </div>
+               </div>
+               <div class="col-md-1">
+                  <div id="locationField">
+                     <input id="autocomplete" placeholder="Enter a city" type="text" />
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-6">
+                  <div id="map"></div>
+               </div>
+               <div class="col-md-3">
+                  <div id="listing">
+                     <table id="resultsTable">
+                        <tbody id="results"></tbody>
+                     </table>
+                  </div>
+                  <div style="display: none">
+                     <div id="info-content">
+                        <table>
+                           <tr id="iw-url-row" class="iw_table_row">
+                              <td id="iw-icon" class="iw_table_icon"></td>
+                              <td id="iw-url"></td>
+                           </tr>
+                           <tr id="iw-address-row" class="iw_table_row">
+                              <td class="iw_attribute_name">Address:</td>
+                              <td id="iw-address"></td>
+                           </tr>
+                           <tr id="iw-phone-row" class="iw_table_row">
+                              <td class="iw_attribute_name">Telephone:</td>
+                              <td id="iw-phone"></td>
+                           </tr>
+                           <tr id="iw-rating-row" class="iw_table_row">
+                              <td class="iw_attribute_name">Rating:</td>
+                              <td id="iw-rating"></td>
+                           </tr>
+                           <tr id="iw-website-row" class="iw_table_row">
+                              <td class="iw_attribute_name">Website:</td>
+                              <td id="iw-website"></td>
+                           </tr>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  Search For A Particular Deptartment:
+                  <select size="1" name="deptid"  style="vertical-align:middle;font-size: 14px;" id="options" onchange="toggleOption(this)">
+                     <option value="option1" selected>ANAESTHESIA</option>
+                     <option value="option2">ANATOMY</option>
+                     <option value="option3">BIOCHEMISTRY</option>
+                     <option value="option4">BIOPHYSICS</option>
+                     <option value="option5">BIOSTATISTICS</option>
+                     <option value="option6">CARDIOLOGY</option>
+                     <option value="option7">CARDIOVASCULAR & THORACIC SURGERY</option>
+                     <option value="option8">COMMUNITY MEDICINE</option>
+                     <option value="option9">CYTOLOGY & GYNAECOLOGICAL PATHOLOGY</option>
+                     <option value="option10">DERMATOLOGY VENEREOLOGY  LEPROLOGY</option>
+                     <option value="option11">DIETITICS</option>
+                     <option value="option12">ENDOCRINOLOGY</option>
+                     <option value="option13">EXPERIMENTAL MEDICINE & BIOTECHNOLOGY</option>
+                     <option value="option14">FORENSIC MEDICINE</option>
+                     <option value="option15">GASTROENTEROLOGY</option>
+                     <option value="option16">GENERAL SURGERY</option>
+                     <option value="option17">HEMATOLOGY</option>
+                     <option value="option18">HEPATOLOGY</option>
+                     <option value="option19">HISTOPATHOLOGY</option>
+                     <option value="option20">HOSPITAL ADMINISTRATION</option>
+                     <option value="option21">IMMUNOPATHOLOGY</option>
+                     <option value="option22">INTERNAL MEDICINE</option>
+                     <option value="option23">MEDICAL MICROBIOLOGY</option>
+                     <option value="option36">MEDICAL PARASITOLOGY</option>
+                     <option value="option24">NATIONAL INSTITUTE OF NURSING EDUCATION </option>
+                     <option value="option25">NEPHROLOGY</option>
+                     <option value="option26">NEUROLOGY</option>
+                     <option value="option27">NEUROSURGERY</option>
+                     <option value="option28">NUCLEAR MEDICINE</option>
+                     <option value="option57">OBS & GYNE</option>
+                     <option value="option30">OPHTHALMOLOGY</option>
+                     <option value="option31">ORAL HEALTH SCIENCES (DENTAL)</option>
+                     <option value="option32">ORTHOPAEDICS</option>
+                     <option value="option33">OTOLARYNGOLOGY (ENT)</option>
+                     <option value="option34">PAEDIATRIC MEDICINE</option>
+                     <option value="option35">PAEDIATRIC SURGERY</option>
+                     <option value="option37">PHARMACOLOGY</option>
+                     <option value="option38">PHYSICAL AND REHABILITATION MEDICINE</option>
+                     <option value="option39">PLASTIC SURGERY</option>
+                     <option value="option40">PSYCHIATRY</option>
+                     <option value="option41">PULMONARY MEDICINE</option>
+                     <option value="option42">RADIO DIAGNOSIS & IMAGING</option>
+                     <option value="option43">RADIOTHERAPY</option>
+                     <option value="option44">RENAL TRANSPLANT SURGERY</option>
+                     <option value="option53">TELEMEDICINE</option>
+                     <option value="option45">TRANSFUSION MEDICINE (BLOOD BANK)</option>
+                     <option value="option54">TRANSLATIONAL AND REGENERATIVE MEDICINE</option>
+                     <option value="option46">UROLOGY</option>
+                     <option value="option47">VIROLOGY</option>
+                  </select>
+                  <input type="submit" value="GO" name="B2" style="font-family: Verdana; font-size: 8pt;"/>
+
+               </div>
+            </div>
+         </div>
+         <div class="row" id="a"></div>
+      </div>
+      <!-- /.main-container  -->
+      <footer class="main-footer">
+         <div class="footer-top">
+         </div>
+         <div class="footer-main">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="footer-col">
+                        <h4 class="footer-title">About us <span class="title-under"></span></h4>
+                        <div class="footer-content">
+                           <p>
+                              <strong>HEALTH FIRST</strong> Our aim is to focus on the customers needs and provide solutions accordingly.
+                              we provide all information about the locality hospitals present near by them so that they get treatment as soon as possible.
+                           </p>
+                           <p>
+                              we also provide them information about the specialist present there or not with all the details of doctor available at that time.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="footer-col">
+                        <h4 class="footer-title">Contact us <span class="title-under"></span></h4>
+                        <div class="footer-content">
+                           <div class="footer-form" >
+                              <form action="php/mail.php" class="ajax-form">
+                                 <div class="form-group">
+                                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                                 </div>
+                                 <div class="form-group">
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                                 </div>
+                                 <div class="form-group">
+                                    <textarea name="message" class="form-control" placeholder="Message" required></textarea>
+                                 </div>
+                                 <div class="form-group alerts">
+                                    <div class="alert alert-success" role="alert">
+                                    </div>
+                                    <div class="alert alert-danger" role="alert">
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <button type="submit" class="btn btn-submit pull-right">Send message</button>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="clearfix"></div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/main.js"></script>
+      <script src="assets/js/map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7t7PjkCiY5GuBgrGush9BFgKlDH9SCMU&libraries=places&callback=initMap" async defer></script>
+   </body>
+</html>
