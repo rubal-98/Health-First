@@ -5,22 +5,31 @@
       <title>Health First</title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Fonts -->
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
       <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+      <!-- Bootsrap -->
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <!-- Font awesome -->
       <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+      <!-- Owl carousel -->
       <link rel="stylesheet" href="assets/css/owl.carousel.css">
+      <!-- Template main Css -->
       <link rel="stylesheet" href="assets/css/style.css">
+      <!-- Modernizr -->
       <script src="assets/js/modernizr-2.6.2.min.js"></script>
       <style>
-         #map1 {
-         height: 500px;
-         width: 100%;
-         color: black;
-         }
+
+      table, th, td {
+        border: 5px solid #115c9b;
+        font-size: 20px;
+        text-align: center;
+}
+th{
+  font-size: 30px;
+}
+
       </style>
-      <script src="assets/js/map1.js">
-      </script>
    </head>
    <body>
       <header class="main-header">
@@ -33,6 +42,7 @@
                            <li> <i class="fa fa-phone"></i> <a href="tel:">987-654-3210 </a> </li>
                            <li> <i class="fa fa-envelope"></i> <a href="mailto:heathfirst@gov.org">heathfirst@gov.org</a> </li>
                         </ul>
+                        <!-- /.header-contact  -->
                      </div>
                      <div class="col-sm-6 col-xs-12 text-right">
                         <ul class="list-unstyled list-inline header-social">
@@ -40,6 +50,7 @@
                            <li> <a href="https://www.twitter.com"> <i class="fa fa-twitter"></i>  </a> </li>
                            <li> <a href="https://www.google.com"> <i class="fa fa-google"></i>  </a> </li>
                         </ul>
+                        <!-- /.header-social  -->
                      </div>
                   </div>
                </div>
@@ -58,31 +69,67 @@
                   <div id="navbar" class="navbar-collapse collapse pull-right">
                      <ul class="nav navbar-nav">
                         <li><a href="index.php">HOME</a></li>
-                        <li><a class="is-active" href="hospitalsnear.html">HOSPITALS NEAR YOU</a></li>
+                        <li><a href="hospitalsnear.html">HOSPITALS NEAR YOU</a></li>
                         <li ><a href="remedy.html">REMEDIES</a>
                         </li>
                         <li><a href="findadoc.html">FIND A DOCTOR</a></li>
                         <li><a href="emergency.php">EMERGENCY</a>
-                          <li><a href="unknownpatients.html">UNKNOWN PATIENTS</a>
-                          </li>
+                        </li>
+                        <li><a class="is-active" href="unknownpatients.html">UNKNOWN PATIENTS</a>
+                        </li>
                      </ul>
                   </div>
+                  <!-- /#navbar -->
                </div>
+               <!-- /.container -->
             </div>
+            <!-- /.navbar-main -->
          </nav>
       </header>
       <div class="page-heading text-center">
          <div class="container zoomIn animated">
-            <h1 class="page-title">HOSPITALS NEAR YOU <span class="title-under"></span></h1>
+            <h1 class="page-title">UNKNOWN PATIENTS <span class="title-under"></span></h1>
             <p class="page-description">
-               This all are the hospitals located in 5 mile circle around you. Also you can right click anywhere on the map and find hospitals nearby!
+               Here you get the details of all the unknown patients.
             </p>
          </div>
       </div>
-      <div class="container">
-         <div class="row">
-            <div id="map1"></div>
-         </div>
+      <div class="main-container">
+
+          <table style="align:center">
+  <tr>
+    <th width=33%>Patient Id</th>
+    <th width=33%>Date admitted</th>
+    <th width=33%>Image</th>
+  </tr>
+  <tr>
+    <td>U101308997</td>
+    <td>Oct 2 2016</td>
+    <td><img src="http://14.139.245.44/emlc/emlcimages/pt_101308997_13317_2015.jpeg" style="width:40%;height:7%"></td>
+  </tr>
+  <tr>
+    <td>U101309119</td>
+    <td>Jan 14 2016</td>
+    <td><img src="http://14.139.245.44/emlc/emlcimages/pt_101309119_13328_2015.jpg" style="width:40%;height:15%"></td>
+  </tr>
+  <tr>
+    <td>U123234</td>
+    <td>Oct 2 2014</td>
+    <td><img src="http://14.139.245.44/emlc/emlcimages/pt_101309286_13340_2015.jpeg" style="width:40%;height:7%"></td>
+  </tr>
+  <tr>
+    <td>U101312375</td>
+    <td>Sept 10 2013</td>
+    <td><img src="http://14.139.245.44/emlc/emlcimages/pt_101312375_13430_2015.jpeg" style="width:40%;height:7%"></td>
+  </tr>
+  <tr>
+    <td>U101315193</td>
+    <td>12 Jan 2010</td>
+    <td><img src="http://14.139.245.44/emlc/emlcimages/pt_101315193_13459_2015.jpeg" style="width:40%;height:7%"></td>
+  </tr>
+
+</table>
+
       </div>
       <footer class="main-footer">
          <div class="footer-main">
@@ -135,15 +182,32 @@
                   </div>
                   <div class="clearfix"></div>
                </div>
-            </div>
+
          </div>
       </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="assets/js/jquery-1.11.1.min.js"><\/script>')</script>
+      <!-- Bootsrap javascript file -->
       <script src="assets/js/bootstrap.min.js"></script>
+      <!-- owl carouseljavascript file -->
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <!-- Template main javascript -->
       <script src="assets/js/main.js"></script>
-
-
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4Ugi6qhrkkJ0O08Rg63soFBmFSTQmSXM&libraries=places&callback=getLocation" async defer></script>
+      <script>
+         function initMap() {
+           var center = {lat: 30.7333, lng: 76.7794};
+           var map = new google.maps.Map(document.getElementById('map'), {
+             zoom: 13,
+             center: center
+           });
+           var marker = new google.maps.Marker({
+             position: center,
+             map: map
+           });
+         }
+      </script>
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVB1tWdYVrQbPp1srIvb32KsZ3e8f377A&callback=initMap"></script>
    </body>
 </html>
