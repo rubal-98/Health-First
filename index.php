@@ -445,6 +445,6 @@ Our programs include-><br>
          }
       </script>
       <script async defer
-         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVB1tWdYVrQbPp1srIvb32KsZ3e8f377A&callback=initMap"></script>
+         src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
    </body>
 </html>
